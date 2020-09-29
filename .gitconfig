@@ -1,0 +1,7 @@
+[user]
+	name = Webb Phillips
+	email = webb.phillips@gmail.com
+[core]
+	mergeoptions = --no-edit
+[pull]
+	rebase = true
