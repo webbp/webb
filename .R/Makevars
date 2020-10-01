@@ -1,0 +1,20 @@
+# llvm/clang
+LLVM_LOC = /opt/local/libexec/llvm-10
+CC=$(LLVM_LOC)/bin/clang -fopenmp
+CXX=$(LLVM_LOC)/bin/clang++ -fopenmp
+# -O3 should be faster than -O2 (default) level optimisation ..
+CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
+CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
+LDFLAGS=-L/opt/local/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib
+CPPFLAGS=-I/opt/local/include -I$(LLVM_LOC)/include
+
+# gcc 10
+#CC = /opt/local/bin/gcc-mp-10
+#CXX = /opt/local/bin/g++-mp-10
+#CFLAGS = -g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
+#CXXFLAGS = -g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
+#LDFLAGS=-L/opt/local/lib -L/opt/local/lib/libgcc -Wl,-headerpad_max_install_names -arch x86_64 -O3 -march=native
+#
+### FC is the compiler used for all Fortran as from R 3.6.0
+#FC = /opt/local/bin/gfortran-mp-10
+#FCFLAGS = -pipe -Os -m64 $(LTO)
