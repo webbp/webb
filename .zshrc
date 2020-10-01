@@ -44,6 +44,10 @@ bindkey -e
 bindkey    "^[[3~"          delete-char
 bindkey    "^[3;5~"         delete-char
 
+# make option arrow keys work
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
 setopt EXTENDED_HISTORY
 
 ## no dupes in history
