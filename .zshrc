@@ -149,3 +149,4 @@ precmd () { __git_ps1 "%F{NONE}%n@%F{$color}mac%f %F{NONE}%~%f" " " }
 #/opt/local/bin/gdate +%s.%N | awk -v t0=$t0 '{printf "%d ms\n", 1000*($1-t0)}'
 
 export TZ='Europe/Amsterdam'
+export LANG=en_US.UTF-8
