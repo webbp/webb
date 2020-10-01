@@ -1,4 +1,4 @@
-library(data.table)
+suppressPackageStartupMessages(library(data.table))
 library(arrow)
 options(repos=list(CRAN="https://cran.biotools.fr/"))
 options(width=158)
