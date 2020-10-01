@@ -41,8 +41,8 @@ bindkey -e
 ### zsh stuff
 
 # make delete key work
-bindkey    "^[[3~"          delete-char
-bindkey    "^[3;5~"         delete-char
+bindkey '^[[3~' delete-char
+bindkey '^[3;5~' delete-char
 
 # make option arrow keys work
 bindkey '^[[1;5D' backward-word
@@ -69,18 +69,18 @@ setopt INC_APPEND_HISTORY_TIME
 #autoload -U down-line-or-beginning-search
 #zle -N up-line-or-beginning-search
 #zle -N down-line-or-beginning-search
-#bindkey "^[[A" up-line-or-beginning-search
-#bindkey "^[[B" down-line-or-beginning-search
+#bindkey '^[[A' up-line-or-beginning-search
+#bindkey '^[[B' down-line-or-beginning-search
 # preceding was occasionally buggy, so instead, just:
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 
 
 # search history midstring with option-up/down
 # option-up/down for partial match (maybe [A/B only work on mac?)
 source ~/.zsh/zsh-history-substring-search.zsh
-bindkey "[A" history-substring-search-up
-bindkey "[B" history-substring-search-down
+bindkey '^[[1;9A' history-substring-search-up
+bindkey '^[[1;9B' history-substring-search-down
 
 
 # autosuggest in grey from history
@@ -99,7 +99,7 @@ bindkey '^[[[SE' autosuggest-execute
 #function autosuggest-cycle-strategy {
 #	ZSH_AUTOSUGGEST_STRATEGY=($x[2] $x[1])
 #}
-#bindkey "^[[A" autosuggest-cycle-strategy
+#bindkey '^[[A' autosuggest-cycle-strategy
 
 # show time of long commands
 ZSH_COMMAND_TIME_MIN_SECONDS=3
